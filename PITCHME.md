@@ -45,11 +45,11 @@ INSERT VIDEO
 ###What did we achieve?
 
 
-1. Development Environment Setup |
-1. Project layout and files created |
-1. A Console Host |
-1. A Windows Service Host |
-1. A WebApi that serializes to Json |
+1. Development Environment Setup
+1. Project layout and files created
+1. A Console Host
+1. A Windows Service Host
+1. A WebApi that serializes to Json
 ---
 ###Links
 
