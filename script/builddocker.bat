@@ -1,0 +1,1 @@
+docker build ..\docker\codepersuit-db\ -t codepersuit-db
