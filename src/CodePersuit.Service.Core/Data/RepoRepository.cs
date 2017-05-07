@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CodePersuit.Service.Core.Data
 {
-    public class RepoRepository
+    public class RepoRepository : IRepoRepository
     {
         private readonly IOptions<DapperConfig> _config;
 
@@ -17,10 +17,7 @@ namespace CodePersuit.Service.Core.Data
         private static readonly string _objectQueryByUser = _objectQuery + $" r INNER JOIN [User] u on u.UserId=r.OwnerId WHERE u.{nameof(User.Username)} like @{nameof(User.Username)}";
         private static readonly string _objectQueryByUserAndName = _objectQueryByUser + $" and r.{nameof(Repo.Name)} like @{nameof(Repo.Name)}";
 
-        public RepoRepository(IOptions<DapperConfig> config)
-        {
-            _config = config ?? throw new ArgumentNullException(nameof(config));
-        }
+        public RepoRepository(IOptions<DapperConfig> config) => _config = config ?? throw new ArgumentNullException(nameof(config));
 
         public async Task<IEnumerable<Repo>> GetAllReposForUser(string username)
         {

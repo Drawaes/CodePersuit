@@ -11,6 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePersuit.Service.Host", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePersuit.Service.WindowsService", "src\CodePersuit.Service.WindowsService\CodePersuit.Service.WindowsService.csproj", "{0D7A2C26-C0B8-44A7-88A3-8FEAC5814371}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1E8B60E1-D7EF-40CA-96B4-BE05A5DDC4A2}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

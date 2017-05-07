@@ -9,17 +9,14 @@ using System.Threading.Tasks;
 
 namespace CodePersuit.Service.Core.Data
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
         private static readonly string _objectQuery = $"SELECT {nameof(User.UserId)}, {nameof(User.Username)} FROM [User]";
         private static readonly string _objectQueryByName = _objectQuery + $" WHERE {nameof(User.Username)} = @{nameof(User.Username)}";
 
         private readonly IOptions<DapperConfig> _config;
 
-        public UserRepository(IOptions<DapperConfig> config)
-        {
-            _config = config ?? throw new ArgumentNullException(nameof(config));
-        }
+        public UserRepository(IOptions<DapperConfig> config) => _config = config ?? throw new ArgumentNullException(nameof(config));
 
         public async Task<User> GetUserByName(string username)
         {

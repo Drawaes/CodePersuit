@@ -17,7 +17,7 @@ GO
 CREATE TABLE Repository
 (
     RepositoryId int NOT NULL IDENTITY (1,1),
-    Name varchar(255) NOT NULL,
+    Name nvarchar(255) NOT NULL,
     OwnerId int NOT NULL
 );
 GO

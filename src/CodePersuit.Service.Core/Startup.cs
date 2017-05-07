@@ -14,12 +14,14 @@ namespace CodePersuit.Service.Core
         {
             services.AddMvcCore()
                 .AddJsonFormatters();
-            services.AddSingleton<UserRepository>();
-            services.AddSingleton<RepoRepository>();
-            services.Configure<DapperConfig>(config =>
-            {
-                config.ConfigurationString = $"server=localhost;database=CodePersuit;User ID=sa;Password={Environment.GetEnvironmentVariable("SA_PASSWORD")};";
-            });
+
+            services
+                .AddSingleton<IUserRepository, UserRepository>()
+                .AddSingleton<IRepoRepository, RepoRepository>()
+                .Configure<DapperConfig>(config =>
+                {
+                    config.ConfigurationString = $"server=localhost;database=CodePersuit;User ID=sa;Password={Environment.GetEnvironmentVariable("SA_PASSWORD")};";
+                });
         }
 
         public void Configure(IApplicationBuilder app, ILoggerFactory logger)
