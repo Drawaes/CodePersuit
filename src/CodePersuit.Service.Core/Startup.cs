@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using CodePersuit.Service.Core.Data;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,10 +14,17 @@ namespace CodePersuit.Service.Core
         {
             services.AddMvcCore()
                 .AddJsonFormatters();
+            services.AddSingleton<UserRepository>();
+            services.AddSingleton<RepoRepository>();
+            services.Configure<DapperConfig>(config =>
+            {
+                config.ConfigurationString = $"server=localhost;database=CodePersuit;User ID=sa;Password={Environment.GetEnvironmentVariable("SA_PASSWORD")};";
+            });
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, ILoggerFactory logger)
         {
+            logger.AddConsole();
             app.UseMvc();
         }
     }

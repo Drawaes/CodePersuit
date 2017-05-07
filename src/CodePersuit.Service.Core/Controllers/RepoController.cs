@@ -1,24 +1,39 @@
-﻿using CodePersuit.Service.Core.Models;
+﻿using CodePersuit.Service.Core.Data;
+using CodePersuit.Service.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CodePersuit.Service.Core.Controllers
 {
-    [Route("api/{userName}/[controller]")]
+    [Route("api/user/{userName}/[controller]")]
     public class RepoController : ControllerBase
     {
-        [HttpGet]
-        public IEnumerable<Repo> Get(string userName)
+        private RepoRepository _repoRepo;
+
+        public RepoController(RepoRepository repoRepo)
         {
-            return null;
+            _repoRepo = repoRepo;
+        }
+
+        [HttpGet]
+        public Task<IEnumerable<Repo>> Get(string userName)
+        {
+            return _repoRepo.GetAllReposForUser(userName);
         }
 
         [HttpGet("{repoName}")]
-        public Repo Get(string userName, string repoName)
+        [ProducesResponseType(typeof(Repo), 200)]
+        public async Task<ActionResult> Get(string userName, string repoName)
         {
-            return null;
+            var repo = await _repoRepo.GetRepoByUserAndName(userName, repoName);
+            if(repo == null)
+            {
+                return NotFound();
+            }
+            return Ok(repo);
         }
     }
 }

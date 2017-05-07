@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CodePersuit.Service.Host": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SA_PASSWORD": "Strong!Password12"
+      }
+    }
+  }
+}

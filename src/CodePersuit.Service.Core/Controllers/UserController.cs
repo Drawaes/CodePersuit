@@ -1,43 +1,40 @@
-﻿using CodePersuit.Service.Core.Models;
+﻿using CodePersuit.Service.Core.Data;
+using CodePersuit.Service.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CodePersuit.Service.Core.Controllers
 {
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
+        private UserRepository _userRepo;
+
+        public UserController(UserRepository userRepo)
+        {
+            _userRepo = userRepo;
+        }
+
         [HttpGet("{userName}")]
         [ProducesResponseType(200, Type = typeof(User))]
-        public ActionResult Get(string userName)
+        public async Task<ActionResult> Get(string userName)
         {
-            if (userName == "Drawaes")
+            var user = await _userRepo.GetUserByName(userName);
+            if(user == null)
             {
-                return Ok(new User()
-                {
-                    Name = "Drawaes"
-                });
+                return NotFound();
             }
-            return NotFound();
+            return Ok(user);
         }
 
         [HttpGet]
-        public IEnumerable<User> Get()
+        public Task<IEnumerable<User>> Get()
         {
-            return new User[]
-                {
-                    new User()
-                    {
-                        Name = "Drawaes"
-                    },
-                    new User()
-                    {
-                        Name = "Qwack"
-                    }
-                };
+            return _userRepo.GetAllUsers();
         }
     }
 }

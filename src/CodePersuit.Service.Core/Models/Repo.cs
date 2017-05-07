@@ -7,6 +7,7 @@ namespace CodePersuit.Service.Core.Models
     public class Repo
     {
         public string Name { get; set; }
-        public int Id { get; set; }
+        public int RepositoryId { get; set; }
+        public int OwnerId { get; set; }
     }
 }
