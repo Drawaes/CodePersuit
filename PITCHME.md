@@ -34,7 +34,7 @@
 
 *Press down to view video*
 +++
-
+![Scripting it all up](https://www.youtube.com/embed/X7M1PQ_CW-o)
 ---
 ##Using Dapper to read data
 
