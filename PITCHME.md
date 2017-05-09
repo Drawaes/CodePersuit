@@ -25,7 +25,7 @@
 ---
 ##Docker for Windows + MSSQL for Linux
 
-(This one has a few gotchas)
+
 *Press down to view video*
 +++
 ![Setting up docker](https://www.youtube.com/embed/3kDj-AMoQEI)
@@ -41,7 +41,7 @@
 
 *Press down to view video*
 +++
-
+![Using Dapper to get data](https://www.youtube.com/embed/7VtMNW4ZbiU)
 ---
 ##A Little bit of Housekeeping
 +++
@@ -58,7 +58,7 @@
 ###Links
 
 
-1. [Docker for Windows]()
-1. [Dapper]()
-1. [MSSQL for Linux on Docker]()
-1. [Code on github]()
+1. [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
+1. [Dapper](https://github.com/StackExchange/Dapper)
+1. [MSSQL for Linux on Docker](https://hub.docker.com/r/microsoft/mssql-server-linux/)
+1. [Code on github](https://github.com/Drawaes/CodePersuit/tree/Tutorial2)
