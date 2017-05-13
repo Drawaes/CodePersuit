@@ -1,4 +1,4 @@
-##Time for a Little Bit of Data!!
+##An API with some Swagger!!
 ---
 ###Dev Environment
 
@@ -7,58 +7,55 @@
 1. ConEmu
 1. Visual Studio Code
 1. Docker for Windows
+1. NodeJs
 ---
 ###Tutorial Goal
 
 
-1. Install a SqlServer Instance
-2. Script out a test database
-3. Begin reading values out of the database
+1. Auto generate a swagger document
+1. Generate an SDK from the swagger document
+1. Use the SDK in a test
+1. Clean up the API and therefore the SDK 
 ---
 ###Learning Goal
 
 
-1. Get docker working on Windows 10 (with nesting)
-1. Scripting out Sql Server on Linux in Docker
-1. Basic Dapper for reading
-1. Basic Async for IO bound controllers
+1. How to use Swashbuckle for swagger generation
+1. Using AutoRest to convert a swagger doc to an SDK
+1. Setting up an integration test
+1. Cleaning up the SDK to make it more friendly
 ---
-##Docker for Windows + MSSQL for Linux
+##Swashbuckle
 
 
 *Press down to view video*
 +++
-![Setting up docker](https://www.youtube.com/embed/3kDj-AMoQEI)
+![Swagger](https://www.youtube.com/embed/qzlIx5zwljA)
 ---
-##Scripting it all
+##AutoRest
 
 *Press down to view video*
 +++
-![Scripting it all up](https://www.youtube.com/embed/X7M1PQ_CW-o)
+![AutoRest]()
 ---
-##Using Dapper to read data
+##Cleaning up our API
 
 
 *Press down to view video*
 +++
-![Using Dapper to get data](https://www.youtube.com/embed/7VtMNW4ZbiU)
----
-##A Little bit of Housekeeping
-+++
-
+![Making our API Reeal preety]()
 ---
 ###What did we achieve?
 
 
-1. Scripted/Repeatable database for testing
-1. Ability to easily add new and more test data
-1. Async controller methods
-1. Injected repositories and configuration
+1. An auto generated swagger doc that looks nice
+1. An integration test that uses our entire stack
+1. An sdk for C# with the ability to produce it for other langauges
 ---
 ###Links
 
 
-1. [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
-1. [Dapper](https://github.com/StackExchange/Dapper)
-1. [MSSQL for Linux on Docker](https://hub.docker.com/r/microsoft/mssql-server-linux/)
-1. [Code on github](https://github.com/Drawaes/CodePersuit/tree/Tutorial2)
+1. [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)
+1. [NodeJs](https://nodejs.org/)
+1. [AutoRest](https://github.com/Azure/autorest)
+1. [Code on github](https://github.com/Drawaes/CodePersuit/tree/Tutorial3)
