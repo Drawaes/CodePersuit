@@ -45,7 +45,7 @@
 ---
 ##A Little bit of Housekeeping
 +++
-
+![A Bit of Housekeeping](https://www.youtube.com/embed/PEMy-QItjvg)
 ---
 ###What did we achieve?
 
