@@ -23,7 +23,7 @@ namespace CodePersuit.Service.Core.Data
             using (var conn = new SqlConnection(_config.Value.ConfigurationString))
             {
                 await conn.OpenAsync();
-                return await conn.QueryFirstOrDefaultAsync<User>(_objectQueryByName, username);
+                return await conn.QueryFirstOrDefaultAsync<User>(_objectQueryByName, new { Username = username });
             }
         }
 

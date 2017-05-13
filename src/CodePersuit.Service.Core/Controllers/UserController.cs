@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace CodePersuit.Service.Core.Controllers
 {
@@ -17,11 +18,12 @@ namespace CodePersuit.Service.Core.Controllers
         public UserController(IUserRepository userRepo) => _userRepo = userRepo;
 
         [HttpGet("{userName}")]
+        [SwaggerOperation("GetUserByUsername")]
         [ProducesResponseType(200, Type = typeof(User))]
-        public async Task<ActionResult> Get(string userName)
+        public async Task<ActionResult> Get(string username)
         {
 
-            var user = await _userRepo.GetUserByName(userName);
+            var user = await _userRepo.GetUserByName(username);
             if (user == null)
             {
                 return NotFound();
@@ -30,6 +32,7 @@ namespace CodePersuit.Service.Core.Controllers
         }
 
         [HttpGet]
+        [SwaggerOperation("GetAllUsers")]
         public Task<IEnumerable<User>> Get() => _userRepo.GetAllUsers();
     }
 }

@@ -5,6 +5,8 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Swashbuckle.AspNetCore.Swagger;
+using Newtonsoft.Json.Converters;
 
 namespace CodePersuit.Service.Core
 {
@@ -13,12 +15,23 @@ namespace CodePersuit.Service.Core
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcCore()
-                .AddJsonFormatters();
+                .AddApiExplorer()
+                .AddJsonFormatters()
+                .AddJsonOptions(j =>
+                {
+                    j.SerializerSettings.Converters.Add(new StringEnumConverter());
+                });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Code Persuit API", Version = "v1", License = new License() { Name = "MIT" } });
+            });
 
             services
                 .AddSingleton<IUserRepository, UserRepository>()
-                .AddSingleton<IRepoRepository, RepoRepository>()
-                .Configure<DapperConfig>(config =>
+                .AddSingleton<IRepoRepository, RepoRepository>();
+            
+            services.Configure<DapperConfig>(config =>
                 {
                     config.ConfigurationString = $"server=localhost;database=CodePersuit;User ID=sa;Password={Environment.GetEnvironmentVariable("SA_PASSWORD")};";
                 });
@@ -28,6 +41,11 @@ namespace CodePersuit.Service.Core
         {
             logger.AddConsole();
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Code Persuit API");
+            });
         }
     }
 }
