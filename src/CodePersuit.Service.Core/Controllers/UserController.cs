@@ -17,7 +17,7 @@ namespace CodePersuit.Service.Core.Controllers
 
         public UserController(IUserRepository userRepo) => _userRepo = userRepo;
 
-        [HttpGet("{userName}")]
+        [HttpGet("{username}")]
         [SwaggerOperation("GetUserByUsername")]
         [ProducesResponseType(200, Type = typeof(User))]
         public async Task<ActionResult> Get(string username)
