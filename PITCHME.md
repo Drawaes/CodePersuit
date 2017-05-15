@@ -43,7 +43,7 @@
 
 *Press down to view video*
 +++
-![Making our API Reeal preety]()
+![Making our API Reeal preety](https://www.youtube.com/embed/duHOh0jqM6o)
 ---
 ###What did we achieve?
 
