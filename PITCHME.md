@@ -36,7 +36,7 @@
 
 *Press down to view video*
 +++
-![AutoRest]()
+![AutoRest](https://www.youtube.com/embed/EIDeiRe2p0w)
 ---
 ##Cleaning up our API
 
