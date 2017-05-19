@@ -59,3 +59,5 @@
 1. [NodeJs](https://nodejs.org/)
 1. [AutoRest](https://github.com/Azure/autorest)
 1. [Code on github](https://github.com/Drawaes/CodePersuit/tree/Tutorial3)
+---
+[Back to the blog post](https://cetus.io/tim/ASPNET-CORE-WebApi-Getting-Started/)
