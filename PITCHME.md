@@ -59,3 +59,5 @@
 1. [ConEmu](https://conemu.github.io/)
 1. [dasMulli Win32 Service](https://github.com/dasMulli/dotnet-win32-service)
 1. [Code on github](https://github.com/Drawaes/CreditMarket/tree/Step1)
+---
+[Back to the blog post](https://cetus.io/tim/ASPNET-CORE-WebApi-Getting-Started/)
