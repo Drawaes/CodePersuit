@@ -1,6 +1,6 @@
-##Time for a Little Bit of Data!!
+## Time for a Little Bit of Data!!
 ---
-###Dev Environment
+### Dev Environment
 
 
 1. Visual Studio Community Edition
@@ -8,14 +8,14 @@
 1. Visual Studio Code
 1. Docker for Windows
 ---
-###Tutorial Goal
+### Tutorial Goal
 
 
 1. Install a SqlServer Instance
 2. Script out a test database
 3. Begin reading values out of the database
 ---
-###Learning Goal
+### Learning Goal
 
 
 1. Get docker working on Windows 10 (with nesting)
@@ -23,31 +23,31 @@
 1. Basic Dapper for reading
 1. Basic Async for IO bound controllers
 ---
-##Docker for Windows + MSSQL for Linux
+## Docker for Windows + MSSQL for Linux
 
 
 *Press down to view video*
 +++
 ![Setting up docker](https://www.youtube.com/embed/3kDj-AMoQEI)
 ---
-##Scripting it all
+## Scripting it all
 
 *Press down to view video*
 +++
 ![Scripting it all up](https://www.youtube.com/embed/X7M1PQ_CW-o)
 ---
-##Using Dapper to read data
+## Using Dapper to read data
 
 
 *Press down to view video*
 +++
 ![Using Dapper to get data](https://www.youtube.com/embed/7VtMNW4ZbiU)
 ---
-##A Little bit of Housekeeping
+## A Little bit of Housekeeping
 +++
 ![A Bit of Housekeeping](https://www.youtube.com/embed/PEMy-QItjvg)
 ---
-###What did we achieve?
+### What did we achieve?
 
 
 1. Scripted/Repeatable database for testing
@@ -55,7 +55,7 @@
 1. Async controller methods
 1. Injected repositories and configuration
 ---
-###Links
+### Links
 
 
 1. [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
