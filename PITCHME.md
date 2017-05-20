@@ -1,6 +1,6 @@
-##An API with some Swagger!!
+## An API with some Swagger!!
 ---
-###Dev Environment
+### Dev Environment
 
 
 1. Visual Studio Community Edition
@@ -9,7 +9,7 @@
 1. Docker for Windows
 1. NodeJs
 ---
-###Tutorial Goal
+### Tutorial Goal
 
 
 1. Auto generate a swagger document
@@ -17,7 +17,7 @@
 1. Use the SDK in a test
 1. Clean up the API and therefore the SDK 
 ---
-###Learning Goal
+### Learning Goal
 
 
 1. How to use Swashbuckle for swagger generation
@@ -25,34 +25,34 @@
 1. Setting up an integration test
 1. Cleaning up the SDK to make it more friendly
 ---
-##Swashbuckle
+## Swashbuckle
 
 
 *Press down to view video*
 +++
 ![Swagger](https://www.youtube.com/embed/qzlIx5zwljA)
 ---
-##AutoRest
+## AutoRest
 
 *Press down to view video*
 +++
 ![AutoRest](https://www.youtube.com/embed/EIDeiRe2p0w)
 ---
-##Cleaning up our API
+## Cleaning up our API
 
 
 *Press down to view video*
 +++
 ![Making our API Reeal preety](https://www.youtube.com/embed/duHOh0jqM6o)
 ---
-###What did we achieve?
+### What did we achieve?
 
 
 1. An auto generated swagger doc that looks nice
 1. An integration test that uses our entire stack
 1. An sdk for C# with the ability to produce it for other langauges
 ---
-###Links
+### Links
 
 
 1. [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)
